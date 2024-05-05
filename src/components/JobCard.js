@@ -60,7 +60,7 @@ export default function JobCard({ data }) {
         minWidth: "280px",
         maxWidth: "350px",
         boxShadow:
-          "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+          "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
       }}
     >
       <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
