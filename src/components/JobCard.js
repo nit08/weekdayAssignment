@@ -1,15 +1,6 @@
 import { capitalizeFirstLetter } from "@/utils/util";
-import { CheckBox, ElectricBolt } from "@mui/icons-material";
-import {
-  Avatar,
-  Button,
-  Card,
-  Icon,
-  SvgIcon,
-  createSvgIcon,
-} from "@mui/material";
+import { Avatar, Button, Card, Icon } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 export default function JobCard({ data }) {
@@ -116,8 +107,8 @@ export default function JobCard({ data }) {
           Estimated Salary:{" "}
           {[minJdSalary, maxJdSalary].filter((v) => !!v).join("-")}{" "}
           {salaryCurrencyCode}
-          <Icon color="success">
-            <CheckBox />
+          <Icon>
+            <CheckIcon />
           </Icon>
         </div>
       )}
@@ -173,6 +164,7 @@ export default function JobCard({ data }) {
         style={{
           height: "45px",
           display: "flex",
+          alignItems: "center",
           gap: "10px",
           backgroundColor: "#5cf5c5",
           color: "black",
@@ -181,6 +173,9 @@ export default function JobCard({ data }) {
           textTransform: "none",
         }}
       >
+        <Icon style={{ lineHeight: "initial" }}>
+          <BoltIcon />
+        </Icon>
         Easy Apply
       </Button>
       <Button
@@ -216,3 +211,59 @@ export default function JobCard({ data }) {
     </Card>
   );
 }
+
+const CheckIcon = () => (
+  <svg
+    fill="#24e076"
+    version="1.1"
+    id="Capa_1"
+    width="20px"
+    height="20px"
+    viewBox="-3.69 -3.69 53.50 53.50"
+    stroke="#24e076"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke="#CCCCCC"
+      stroke-width="0.09224800000000001"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <g>
+        <g>
+          <g>
+            <path d="M37.727,0.062H8.397C3.759,0.062,0,3.822,0,8.46v29.204c0,4.639,3.759,8.398,8.397,8.398h29.33 c4.637,0,8.397-3.76,8.397-8.398V8.46C46.125,3.822,42.365,0.062,37.727,0.062z M38.007,19.14L22.142,35.005 c-0.673,0.674-1.586,1.052-2.538,1.052s-1.865-0.379-2.538-1.052l-7.863-7.863c-1.401-1.402-1.401-3.674,0.001-5.077 c0.673-0.673,1.585-1.051,2.537-1.051c0.952,0,1.864,0.378,2.537,1.051l4.686,4.687c0.17,0.17,0.401,0.266,0.641,0.266 c0.24,0,0.471-0.096,0.641-0.266l12.686-12.687c0.674-0.673,1.586-1.052,2.539-1.052c0.951,0.001,1.864,0.379,2.537,1.052 C39.409,15.467,39.409,17.739,38.007,19.14z"></path>{" "}
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+);
+
+const BoltIcon = () => (
+  <svg
+    width="20px"
+    height="20px"
+    viewBox="0 0 512 512"
+    aria-hidden="true"
+    role="img"
+    class="iconify iconify--fxemoji"
+    preserveAspectRatio="xMidYMid meet"
+    fill="#000000"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        fill="#FFB636"
+        d="M459.866 218.346l-186.7.701c-4.619.017-7.618-4.861-5.517-8.975L370.845 8.024c3.103-6.075-4.493-11.949-9.592-7.417L39.948 286.141c-4.221 3.751-1.602 10.732 4.045 10.78l170.444 1.457c4.443.038 7.391 4.619 5.583 8.679L133.317 501.73c-2.688 6.035 4.709 11.501 9.689 7.16l320.937-279.725c4.307-3.753 1.637-10.84-4.077-10.819z"
+      ></path>
+    </g>
+  </svg>
+);
