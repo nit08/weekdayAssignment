@@ -57,7 +57,7 @@ export default function JobCard({ data }) {
       fluid
       style={{
         flex: "1 1 auto",
-        padding: "20px 25px",
+        padding: "10px 25px",
         borderRadius: "20px",
         // minWidth: "250px",
         // maxWidth: "350px",
@@ -65,7 +65,14 @@ export default function JobCard({ data }) {
           "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
       }}
     >
-      <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "15px",
+          alignItems: "center",
+          marginTop: "10px",
+        }}
+      >
         <Image
           height={50}
           width={50}
