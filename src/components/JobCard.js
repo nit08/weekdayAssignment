@@ -137,7 +137,6 @@ export default function JobCard({ data }) {
           }}
         >
           <Button
-            href={jdLink}
             style={{
               fontSize: "0.9rem",
               fontWeight: "500",
@@ -162,6 +161,7 @@ export default function JobCard({ data }) {
       </div>
       <Button
         fullWidth
+        href={jdLink}
         variant="contained"
         style={{
           height: "45px",
