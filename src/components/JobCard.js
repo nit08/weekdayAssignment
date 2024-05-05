@@ -54,13 +54,10 @@ export default function JobCard({ data }) {
   };
   return (
     <Container
-      fluid
       style={{
         flex: "1 1 auto",
         padding: "10px 25px",
         borderRadius: "20px",
-        // minWidth: "250px",
-        // maxWidth: "350px",
         boxShadow:
           "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
       }}
@@ -231,13 +228,13 @@ const CheckIcon = () => (
     viewBox="-3.69 -3.69 53.50 53.50"
     stroke="#24e076"
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       stroke="#CCCCCC"
-      stroke-width="0.09224800000000001"
+      strokeWidth="0.09224800000000001"
     ></g>
     <g id="SVGRepo_iconCarrier">
       <g>
@@ -258,15 +255,15 @@ const BoltIcon = () => (
     viewBox="0 0 512 512"
     aria-hidden="true"
     role="img"
-    class="iconify iconify--fxemoji"
+    className="iconify iconify--fxemoji"
     preserveAspectRatio="xMidYMid meet"
     fill="#000000"
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     ></g>
     <g id="SVGRepo_iconCarrier">
       <path
