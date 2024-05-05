@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import JobCard from "@/components/JobCard";
+import { Grid } from "@mui/material";
 
 const getData = async () => {
   const myHeaders = new Headers();
@@ -42,15 +43,21 @@ export default async function Home() {
       <div>Filters</div>
       <div
         style={{
+          padding: "0px 10px",
           maxWidth: "1200px",
-          display: "flex",
-          gap: "20px",
-          flexWrap: "wrap",
         }}
       >
-        {data?.jdList?.map((l) => (
-          <JobCard data={l} key={l?.jbUid} />
-        ))}
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 2, sm: 8, md: 12 }}
+        >
+          {data?.jdList?.map((l) => (
+            <Grid item xs={2} sm={4} md={4} key={l?.jbUid}>
+              <JobCard data={l} key={l?.jbUid} />
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </main>
   );

@@ -1,5 +1,5 @@
 import { capitalizeFirstLetter } from "@/utils/util";
-import { Avatar, Button, Card, Icon } from "@mui/material";
+import { Avatar, Button, Card, Container, Icon } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -53,12 +53,14 @@ export default function JobCard({ data }) {
     );
   };
   return (
-    <Card
+    <Container
+      fluid
       style={{
+        flex: "1 1 auto",
         padding: "20px 25px",
         borderRadius: "20px",
-        minWidth: "280px",
-        maxWidth: "350px",
+        // minWidth: "250px",
+        // maxWidth: "350px",
         boxShadow:
           "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
       }}
@@ -208,7 +210,7 @@ export default function JobCard({ data }) {
         </div>
         Unlock referral asks
       </Button>
-    </Card>
+    </Container>
   );
 }
 
