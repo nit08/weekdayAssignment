@@ -43,7 +43,7 @@ export default async function Home() {
       <div>Filters</div>
       <div
         style={{
-          padding: "0px 10px",
+          padding: "0px 20px",
           maxWidth: "1200px",
         }}
       >

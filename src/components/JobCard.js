@@ -62,7 +62,7 @@ export default function JobCard({ data }) {
         // minWidth: "250px",
         // maxWidth: "350px",
         boxShadow:
-          "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+          "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
       }}
     >
       <div
@@ -109,7 +109,7 @@ export default function JobCard({ data }) {
             fontSize: "0.9rem",
             marginTop: "10px",
             display: "flex",
-            gap: "10px",
+            gap: "5px",
             alignItems: "center",
           }}
         >
@@ -174,7 +174,7 @@ export default function JobCard({ data }) {
           height: "45px",
           display: "flex",
           alignItems: "center",
-          gap: "10px",
+          gap: "5px",
           backgroundColor: "#5cf5c5",
           color: "black",
           borderRadius: "8px",
@@ -203,7 +203,7 @@ export default function JobCard({ data }) {
           textTransform: "none",
         }}
       >
-        <div style={{ display: "flex", gap: "8px" }}>
+        <div style={{ display: "flex", gap: "5px" }}>
           <Avatar
             alt="Remy Sharp"
             sx={{ width: 24, height: 24 }}
