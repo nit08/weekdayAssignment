@@ -8,8 +8,8 @@ const getData = async () => {
   myHeaders.append("Content-Type", "application/json");
 
   const body = JSON.stringify({
-    limit: 10,
-    offset: 0,
+    limit: 20,
+    offset: 5,
   });
 
   const requestOptions = {
@@ -52,9 +52,9 @@ export default async function Home() {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 2, sm: 8, md: 12 }}
         >
-          {data?.jdList?.map((l) => (
-            <Grid item xs={2} sm={4} md={4} key={l?.jbUid}>
-              <JobCard data={l} key={l?.jbUid} />
+          {data?.jdList?.map((l, i) => (
+            <Grid item xs={2} sm={4} md={4} key={i}>
+              <JobCard data={l} />
             </Grid>
           ))}
         </Grid>
