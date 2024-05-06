@@ -56,7 +56,7 @@ const JobFilterForm = () => {
     <div style={{ padding: "40px" }}>
       <form
         onSubmit={handleSubmit}
-        style={{ display: "flex", gap: "5px", flexWrap: "wrap" }}
+        style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}
       >
         <div>
           <TextField
@@ -69,7 +69,7 @@ const JobFilterForm = () => {
         </div>
         <div>
           <FormControl
-            sx={{ minWidth: "160px", width: "max-content" }}
+            sx={{ minWidth: "180px", width: "max-content" }}
             size="small"
           >
             <InputLabel id="experience-slider">Minimum Experience</InputLabel>
@@ -90,7 +90,7 @@ const JobFilterForm = () => {
         </div>
         <div>
           <FormControl
-            sx={{ minWidth: "160px", width: "max-content" }}
+            sx={{ minWidth: "180px", width: "max-content" }}
             size="small"
           >
             <InputLabel id="company-size">Company Size</InputLabel>
@@ -113,7 +113,7 @@ const JobFilterForm = () => {
         </div>
         <div>
           <FormControl
-            sx={{ minWidth: "160px", width: "max-content" }}
+            sx={{ minWidth: "180px", width: "max-content" }}
             size="small"
           >
             <InputLabel id="job-type">Job Type</InputLabel>
@@ -133,7 +133,7 @@ const JobFilterForm = () => {
         </div>
         <div>
           <FormControl
-            sx={{ minWidth: "160px", width: "max-content" }}
+            sx={{ minWidth: "210px", width: "max-content" }}
             size="small"
           >
             <InputLabel id="job-type">Minimum Base Pay</InputLabel>
