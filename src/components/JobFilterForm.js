@@ -145,8 +145,10 @@ const JobFilterForm = ({ filters, setLocalFilters }) => {
               value={filters.minBasePay}
               onChange={handleFilterChange}
             >
-              {["0L", "5L", "10L", "15L", "20L"].map((o) => (
-                <MenuItem value={parseInt(o.slice(0, -1))}>{o}</MenuItem>
+              {["0L", "5L", "10L", "15L", "20L"].map((o, i) => (
+                <MenuItem value={parseInt(o.slice(0, -1))} key={i}>
+                  {o}
+                </MenuItem>
               ))}{" "}
             </Select>
           </FormControl>
@@ -160,7 +162,6 @@ const JobFilterForm = ({ filters, setLocalFilters }) => {
             onChange={handleFilterChange}
           />
         </div>
-        <Button color="primary">Clear</Button>
       </form>
     </div>
   );
