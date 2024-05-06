@@ -1,5 +1,4 @@
 Array.prototype.getFilteredJobData = function (filters) {
-  console.log("func", filters);
   return this.filter((job) => {
     if (filters.minExp && filters.minExp > 0 && job.maxExp < filters.minExp) {
       return false;

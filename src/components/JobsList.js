@@ -5,8 +5,11 @@ import JobCard from "@/components/JobCard";
 import { Box, CircularProgress, Grid } from "@mui/material";
 import { getData } from "@/utils/fetcher";
 import getFilteredJobData from "@/utils/filter";
+import { useAppSelector } from "@/redux/hooks";
 
-export default function JobsList({ inititalData, filters }) {
+export default function JobsList({ inititalData }) {
+  const filters = useAppSelector((state) => state.filters);
+
   const [jobs, setJobs] = useState(inititalData?.jdList);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);

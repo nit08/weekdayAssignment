@@ -1,4 +1,6 @@
-import SearchJobsPage from "@/Containers/SearchJobsPage";
+import JobFilterForm from "@/components/JobFilterForm";
+import JobsList from "@/components/JobsList";
+import { Box } from "@mui/material";
 import { getData } from "@/utils/fetcher";
 
 export default async function Home() {
@@ -13,7 +15,10 @@ export default async function Home() {
         alignItems: "center",
       }}
     >
-      <SearchJobsPage data={data} />
+      <JobFilterForm />
+      <Box sx={{ padding: "20px", maxWidth: "1200px" }}>
+        <JobsList inititalData={data} />
+      </Box>
     </main>
   );
 }

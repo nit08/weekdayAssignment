@@ -11,6 +11,8 @@ import {
   Popover,
   Typography,
 } from "@mui/material";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { setFilters } from "@/redux/actions";
 
 // import { setFilters } from "../redux/actions";
 
@@ -27,25 +29,22 @@ const experienceOptions = [
   "9 years",
   "10+ years",
 ];
-const JobFilterForm = ({ filters, setLocalFilters }) => {
-  const [anchorEl, setAnchorEl] = useState(null);
+const JobFilterForm = () => {
+  const dispatch = useAppDispatch();
+  const filters = useAppSelector((state) => state.filters);
+
   const [experience, setExperience] = useState(0);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
-    setLocalFilters((prevFilters) => ({
-      ...prevFilters,
-      [name]: value,
-    }));
+    dispatch(setFilters({ ...filters, [name]: value }));
   };
 
   const handleSliderChange = (e) => {
     const value = e.target.value;
+
     setExperience(value);
-    setLocalFilters((prevFilters) => ({
-      ...prevFilters,
-      minExp: value,
-    }));
+    dispatch(setFilters({ ...filters, minExperience: value }));
   };
 
   const handleSubmit = (e) => {
