@@ -1,6 +1,5 @@
-import JobsList from "@/Containers/JobsList";
+import SearchJobsPage from "@/Containers/SearchJobsPage";
 import { getData } from "@/utils/fetcher";
-import { Box } from "@mui/material";
 
 export default async function Home() {
   const data = await getData();
@@ -14,10 +13,7 @@ export default async function Home() {
         alignItems: "center",
       }}
     >
-      <div>Filters</div>
-      <Box sx={{ padding: "20px", maxWidth: "1200px" }}>
-        <JobsList inititalData={data} />
-      </Box>
+      <SearchJobsPage data={data} />
     </main>
   );
 }

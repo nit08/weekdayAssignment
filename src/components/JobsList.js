@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import JobCard from "@/components/JobCard";
 import { Box, CircularProgress, Grid } from "@mui/material";
 import { getData } from "@/utils/fetcher";
+import getFilteredJobData from "@/utils/filter";
 
-export default function JobsList({ inititalData }) {
+export default function JobsList({ inititalData, filters }) {
   const [jobs, setJobs] = useState(inititalData?.jdList);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -42,7 +43,7 @@ export default function JobsList({ inititalData }) {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 2, sm: 8, md: 12 }}
       >
-        {jobs?.map((l, i) => (
+        {jobs?.getFilteredJobData(filters).map((l, i) => (
           <Grid item xs={2} sm={4} md={4} key={i}>
             <JobCard data={l} />
           </Grid>

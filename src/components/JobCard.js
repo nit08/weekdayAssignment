@@ -56,7 +56,7 @@ export default function JobCard({ data }) {
     <Container
       style={{
         flex: "1 1 auto",
-        padding: "10px 25px",
+        padding: "12px 25px",
         borderRadius: "20px",
         boxShadow:
           "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
