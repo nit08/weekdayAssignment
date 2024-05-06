@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import JobFilterForm from "@/components/JobFilterForm";
 import JobsList from "@/components/JobsList";
@@ -8,9 +8,9 @@ import React, { useState } from "react";
 export default function SearchJobsPage({ data }) {
   const [filters, setLocalFilters] = useState({
     jobRole: "",
-    minExperience: 0,
+    minExp: 0,
     companySize: "",
-    jobType: "",
+    location: "",
     minBasePay: "",
     companyName: "",
   });

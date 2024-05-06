@@ -11,6 +11,7 @@ import {
   Popover,
   Typography,
 } from "@mui/material";
+
 // import { setFilters } from "../redux/actions";
 
 const experienceOptions = [
@@ -26,10 +27,9 @@ const experienceOptions = [
   "9 years",
   "10+ years",
 ];
-const JobFilterForm = ({filters,setLocalFilters}) => {
+const JobFilterForm = ({ filters, setLocalFilters }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [experience, setExperience] = useState(0);
-
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -44,20 +44,9 @@ const JobFilterForm = ({filters,setLocalFilters}) => {
     setExperience(value);
     setLocalFilters((prevFilters) => ({
       ...prevFilters,
-      minExperience: value,
+      minExp: value,
     }));
   };
-
-  const handlePopoverClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "experience-popover" : undefined;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -87,7 +76,7 @@ const JobFilterForm = ({filters,setLocalFilters}) => {
             <InputLabel id="experience-slider">Minimum Experience</InputLabel>
             <Select
               labelId="experience-slider"
-              name="minExperience"
+              name="minExp"
               value={experience}
               label="Minimum Experience"
               onChange={handleSliderChange}
@@ -131,26 +120,36 @@ const JobFilterForm = ({filters,setLocalFilters}) => {
             <InputLabel id="job-type">Job Type</InputLabel>
             <Select
               labelId="job-type"
-              name="jobType"
+              name="location"
               label="Job Type"
-              value={filters.jobType}
+              value={filters.location}
               onChange={handleFilterChange}
             >
               <MenuItem value="any">No Preference</MenuItem>
               <MenuItem value="remote">Remote</MenuItem>
-              <MenuItem value="inoffice">In-office</MenuItem>
+              <MenuItem value="onsite">In-office</MenuItem>
               <MenuItem value="hybrid">Hybrid</MenuItem>
             </Select>
           </FormControl>
         </div>
         <div>
-          <TextField
+          <FormControl
+            sx={{ minWidth: "160px", width: "max-content" }}
             size="small"
-            name="minBasePay"
-            label="Minimum Base Pay"
-            value={filters.minBasePay}
-            onChange={handleFilterChange}
-          />
+          >
+            <InputLabel id="job-type">Minimum Base Pay</InputLabel>
+            <Select
+              labelId="job-type"
+              name="minBasePay"
+              label="Minimum Base Pay"
+              value={filters.minBasePay}
+              onChange={handleFilterChange}
+            >
+              {["0L", "5L", "10L", "15L", "20L"].map((o) => (
+                <MenuItem value={parseInt(o.slice(0, -1))}>{o}</MenuItem>
+              ))}{" "}
+            </Select>
+          </FormControl>
         </div>
         <div>
           <TextField
