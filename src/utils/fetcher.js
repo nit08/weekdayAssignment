@@ -4,7 +4,7 @@ export const getData = async (offset, limit = 20) => {
 
   const body = JSON.stringify({
     limit: limit,
-    offset: offset || 0,
+    offset: offset || 10,
   });
 
   const requestOptions = {
